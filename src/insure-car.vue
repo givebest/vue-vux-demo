@@ -1,7 +1,8 @@
 <template>
   <div>
+    <x-header>车险询价</x-header>
     <group>
-      <x-address title="投保区域" placeholder="请选择城市" v-model="carCity" raw-value :list="addressData" hide-district></x-address>
+      <x-address title="投保区域" placeholder="请选择城市" v-model="carCity" :list="addressData" hide-district></x-address>
       <x-input title="车牌号" placeholder="粤B123456" v-model="carNO" widht="105px"></x-input>
       <datetime title="购买日期" v-model="carDate" :min-year=2010 :max-year=2017></datetime>
        <selector title="使用性质" placeholder="请选择" v-model="carUse" :options="carUseData"></selector>
@@ -12,12 +13,14 @@
       <x-button type="primary" @click.native="submit">查询</x-button>
     </p>
 
+     <loading v-model="loading" text="提交中"></loading>
+
   </div>
 </template>
 
 
 <script>
-import { Group, Cell, XInput, Selector, PopupPicker, XSwitch, XButton, XAddress, ChinaAddressData, Datetime } from 'vux'
+import { Group, Cell, XInput, Selector, PopupPicker, XSwitch, XButton, XAddress, ChinaAddressData, Datetime, XHeader, Loading } from 'vux'
 
 export default {
   components: {
@@ -30,7 +33,9 @@ export default {
     XButton,
     XAddress,
     ChinaAddressData,
-    Datetime
+    Datetime,
+    XHeader,
+    Loading
   },
   data () {
     return {
@@ -40,7 +45,8 @@ export default {
       isBusiness: true,
       carDate: '2017-01-01',
       carUse: '',
-      carUseData: [{key: '1', value: '个人-非运营'}, {key: '2', value: '个人-运营'}, {key: '3', value: '公司-非运营'}, {key: '4', value: '公司-运营'}]
+      carUseData: [{key: '个人-非运营', value: '个人-非运营'}, {key: '个人-运营', value: '个人-运营'}, {key: '公司-非运营', value: '公司-非运营'}, {key: '公司-运营', value: '公司-运营'}],
+      loading: false
     }
   },
   methods: {
@@ -84,6 +90,16 @@ export default {
         })
         return
       }
+      let carData = {
+        city: this.carCity,
+        NO: this.carNO,
+        date: this.carDate,
+        use: this.carUse,
+        isBusiness: this.isBusiness
+      }
+      this.loading = true
+      window.sessionStorage.setItem('myCarData', window.JSON.stringify(carData))
+      this.$router.push({ path: '/insure/car/result' })
     }
   }
 }

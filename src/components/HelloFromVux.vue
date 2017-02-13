@@ -2,7 +2,7 @@
   <div class="container">
     <header class="header">
       <section class="head-search">
-        <search @result-click="resultClick" @on-change="getResult" :results="results" v-model="value" autoFixed="true"></search>
+        <search @result-click="resultClick" @on-change="getResult" :results="results" v-model="value"></search>
       </section>
 
       <section class="head-banner">
@@ -22,7 +22,7 @@
 
           <flexbox-item>
             <div class="flex-demo">
-              <router-link to="/about">
+              <router-link to="/insure/car">
                 <i class="iconfont  icon-training"></i>
                 <p>图解保险</p>
               </router-link>
@@ -31,7 +31,7 @@
 
           <flexbox-item>
             <div class="flex-demo">
-              <router-link to="/about">
+              <router-link to="/insure/car">
                 <i class="iconfont  icon-email"></i>
                 <p>邀请函</p>
               </router-link>
@@ -40,7 +40,7 @@
 
           <flexbox-item>
             <div class="flex-demo">
-              <router-link to="/about">
+              <router-link to="/insure/car">
                 <i class="iconfont  icon-process"></i>
                 <p>微分享</p>
               </router-link>
@@ -52,7 +52,7 @@
 
           <flexbox-item>
             <div class="flex-demo">
-              <router-link to="/about">
+              <router-link to="/insure/car">
                 <i class="iconfont  icon-account"></i>
                 <p>团意险</p>
               </router-link>
@@ -61,7 +61,7 @@
 
           <flexbox-item>
             <div class="flex-demo">
-              <router-link to="/about">
+              <router-link to="/insure/car">
                 <i class="iconfont  icon-auto"></i>
                 <p>车险</p>
               </router-link>
@@ -70,7 +70,7 @@
 
           <flexbox-item>
             <div class="flex-demo">
-              <router-link to="/about">
+              <router-link to="/insure/car">
                 <i class="iconfont  icon-gerenzhongxin"></i>
                 <p>个人险</p>
               </router-link>
@@ -79,7 +79,7 @@
 
           <flexbox-item>
             <div class="flex-demo">
-              <router-link to="/about">
+              <router-link to="/insure/car">
                 <i class="iconfont  icon-cart"></i>
                 <p>热卖</p>
               </router-link>
@@ -94,13 +94,19 @@
     <section class="main-banner">
       <flexbox>
           <flexbox-item>
-            <img class="img-width100" src="http://files.huizecdn.com/file1/M00/44/4B/wKgls1h11xOALIQLAACClKu8sc4466.png" alt="xx">
+            <router-link to="/insure/car">
+              <img class="img-width100" src="http://files.huizecdn.com/file1/M00/44/4B/wKgls1h11xOALIQLAACClKu8sc4466.png" alt="xx">
+            </router-link>
           </flexbox-item>
           <flexbox-item>
-            <img class="img-width100" src="http://files.huizecdn.com/file1/M00/45/77/wKgls1h8PGiALyHWAAB9IlodXS4378.png" alt="xx">
+            <router-link to="/insure/car">
+              <img class="img-width100" src="http://files.huizecdn.com/file1/M00/45/77/wKgls1h8PGiALyHWAAB9IlodXS4378.png" alt="xx">
+            </router-link>
           </flexbox-item>
           <flexbox-item>
-            <img class="img-width100" src="http://files.huizecdn.com/file1/M00/45/77/wKgls1h8PEyAPbuAAACdl55Upfg746.jpg" alt="xx">
+            <router-link to="/insure/car">
+              <img class="img-width100" src="http://files.huizecdn.com/file1/M00/45/77/wKgls1h8PEyAPbuAAACdl55Upfg746.jpg" alt="xx">
+            </router-link>
           </flexbox-item>
       </flexbox>
     </section>
@@ -108,15 +114,21 @@
    
     <flexbox>
         <flexbox-item>
-          <img class="img-width100" src="http://files.huizecdn.com/file1/M00/40/C1/wKgls1hmR7GAJnw9AACUaLYOwJE482.png" alt="xx">
+          <router-link to="/insure/car">
+            <img class="img-width100" src="http://files.huizecdn.com/file1/M00/40/C1/wKgls1hmR7GAJnw9AACUaLYOwJE482.png" alt="xx">
+          </router-link>
         </flexbox-item>
         <flexbox-item>
           <flexbox>
         <flexbox-item>
-          <img class="img-width100" src="http://files.huizecdn.com/file1/M00/05/60/wKgls1fV_7KASZrNAADM8_gHV2Q173.png" alt="xx">
+          <router-link to="/insure/car">
+            <img class="img-width100" src="http://files.huizecdn.com/file1/M00/05/60/wKgls1fV_7KASZrNAADM8_gHV2Q173.png" alt="xx">
+          </router-link>
         </flexbox-item>
         <flexbox-item>
-          <img class="img-width100" src="http://files.huizecdn.com/file1/M00/05/60/wKgls1fV_7KASZrNAADM8_gHV2Q173.png" alt="xx">
+          <router-link to="/insure/car">
+            <img class="img-width100" src="http://files.huizecdn.com/file1/M00/05/60/wKgls1fV_7KASZrNAADM8_gHV2Q173.png" alt="xx">
+          </router-link>
         </flexbox-item>
     </flexbox>
         </flexbox-item>
@@ -124,10 +136,14 @@
 
      <flexbox>
         <flexbox-item>
-          <img class="img-width100" src="http://files.huizecdn.com/file1/M00/05/60/wKgls1fV_7KASZrNAADM8_gHV2Q173.png" alt="xx">
+          <router-link to="/insure/car">
+            <img class="img-width100" src="http://files.huizecdn.com/file1/M00/05/60/wKgls1fV_7KASZrNAADM8_gHV2Q173.png" alt="xx">
+          </router-link>
         </flexbox-item>
         <flexbox-item>
-          <img class="img-width100" src="http://files.huizecdn.com/file1/M00/05/60/wKgls1fV_7KASZrNAADM8_gHV2Q173.png" alt="xx">
+          <router-link to="/insure/car">
+            <img class="img-width100" src="http://files.huizecdn.com/file1/M00/05/60/wKgls1fV_7KASZrNAADM8_gHV2Q173.png" alt="xx">
+          </router-link>
         </flexbox-item>
     </flexbox>
 
@@ -155,7 +171,7 @@ const imgList = [
 ]
 
 const bannerList = imgList.map((one, index) => ({
-  url: 'javascript:',
+  url: '/insure/car',
   img: one
 }))
 

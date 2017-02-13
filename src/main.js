@@ -7,6 +7,7 @@ import App from './App'
 import Home from './components/HelloFromVux'
 import About from './About'
 import InsureCar from './insure-car'
+import InsureCarResult from './insure-car-result'
 
 import Vuex from 'vuex'
 Vue.use(Vuex)
@@ -26,6 +27,9 @@ const routes = [{
 }, {
   path: '/insure/car',
   component: InsureCar
+}, {
+  path: '/insure/car/result',
+  component: InsureCarResult
 }]
 
 const router = new VueRouter({
